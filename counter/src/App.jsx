@@ -6,9 +6,14 @@ function App() {
   let [counter,setCounter] = useState(0);
 
   const addValue = () => {
-    console.log("value added",Math.random());
     setCounter(counter+1);
-  }
+  };
+
+  const removeValue = () => {
+    if(counter>0) {
+      setCounter(counter-1);
+    }
+  };
 
 
   return (
@@ -22,11 +27,7 @@ function App() {
       <br />
       <br />
       <button
-        onClick={() => {
-          if(counter>0){
-            setCounter(counter-1);
-          }
-        }}
+        onClick={removeValue}
         >Remove value</button>
     </>
   )
