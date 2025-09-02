@@ -47,7 +47,7 @@ function TodoItem({ todo }) {
                   } else setIsTodoEditable((prev) => !prev);
               }}
               disabled={todo.completed}
-          >
+>
               {isTodoEditable ? "📁" : "✏️"}
           </button>
           {/* Delete Todo Button */}

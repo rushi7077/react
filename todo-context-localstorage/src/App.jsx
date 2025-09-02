@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import {TodoProvider} from './contexts'
 import './App.css'
 import TodoForm from './components/TodoForm'
-import ToDoItem from './components/ToDoItem'
+import TodoItem from './components/TodoItem'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -59,7 +59,7 @@ function App() {
                           <div key={todo.id}
                           className='w-full'
                           >
-                            <ToDoItem todo={todo} />
+                            <TodoItem todo={todo} />
                           </div>
                         ))}
                     </div>
